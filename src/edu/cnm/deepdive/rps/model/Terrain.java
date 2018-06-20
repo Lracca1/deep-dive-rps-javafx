@@ -62,4 +62,6 @@ public class Terrain {
   public long getIterations() {
     return iterations;
   }
+  // TODO Add public void mixing(int pairs) method. This should select a number of random pairs
+  // not necessarily adjacent), and swap the two members in each pair.
 }
