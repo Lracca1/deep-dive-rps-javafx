@@ -34,6 +34,7 @@ public class Terrain {
 
   public void iterate(int steps) {
     for (int i = 0; i < steps; i++) {
+
       int playerRow = rng.nextInt(cells.length);
       int playerCol = rng.nextInt(cells[playerRow].length);
       Breed player = cells[playerRow][playerCol];
@@ -62,6 +63,14 @@ public class Terrain {
   public long getIterations() {
     return iterations;
   }
-  // TODO Add public void mixing(int pairs) method. This should select a number of random pairs
-  // not necessarily adjacent), and swap the two members in each pair.
+  private int[] randomLocation() {
+    int row = rng.nextInt(cells.length);
+    return new int[] {
+        rng.nextInt(cells[row].length)
+    };
+  }
+
+  public void mix(int numPairs) {
+
+  }
 }
